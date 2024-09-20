@@ -42,7 +42,7 @@ public class ClubController {
     public String saveClub(@Valid @ModelAttribute("club") ClubDto clubDto, BindingResult result, Model model){
         if(result.hasErrors()){
             model.addAttribute("club", clubDto);
-            return "club-create";
+            return "clubs-create";
         }
         clubService.saveClub(clubDto);
         return "redirect:/clubs";

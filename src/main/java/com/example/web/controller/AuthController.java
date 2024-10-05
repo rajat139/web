@@ -4,7 +4,6 @@ import com.example.web.dto.RegistrationDto;
 import com.example.web.models.UserEntity;
 import com.example.web.service.UserService;
 import jakarta.validation.Valid;
-import lombok.Getter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,6 +23,7 @@ public class AuthController {
     public String loginPage(){
         return "login";
     }
+
 
     @GetMapping("/register")
     public String getRegiterForm(Model model){
